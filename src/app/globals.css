@@ -4,5 +4,5 @@
 
 body {
   overflow-wrap: break-word;
-  @apply bg-cs-dark;
+  @apply bg-cs-dark scroll-smooth;
 }

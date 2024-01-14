@@ -13,7 +13,7 @@ import { MotionP } from "./motionP";
 
 export default function Header() {
   return (
-    <header className="flex flex-col px-[2rem]">
+    <header className="flex flex-col px-8">
       <nav className="flex justify-between items-center w-full gap-x-8 max-w-[1300px] mx-auto py-8">
         <MotionH1
           initial={{ opacity: 0, y: -20 }}
@@ -62,11 +62,16 @@ export default function Header() {
         >
           Resume
         </MotionButton>
-        <button className="md:hidden text-cs-green">
+        <MotionButton
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          className="md:hidden text-cs-green"
+        >
           <HiMenuAlt3 size={28} />
-        </button>
+        </MotionButton>
       </nav>
-      <div className="min-h-[calc(100vh-104px)] flex">
+      <div className="min-h-[calc(96vh-104px)] flex">
         <div className="flex-1 mx-auto text-white max-w-[1300px] gap-y-12 gap-x-[50px] py-14 flex flex-col-reverse lg:flex-row items-center">
           <div className="flex items-center justify-center gap-x-12 lg:flex-1">
             <div className="flex flex-col relative isolate">
@@ -74,7 +79,7 @@ export default function Header() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.7, delay: 2.3 }}
-                className="shadow-[0_0_1000px_70px_#03C988] animate-pulse absolute top-[50%] left-[45%] -translate-x-[50%] -translate-y-[50%]"
+                className="shadow-[0_0_300px_70px_#03C988] animate-pulse absolute top-[50%] left-[45%] -translate-x-[50%] -translate-y-[50%]"
               ></MotionSpan>
               <MotionH1
                 initial={{ opacity: 0, x: -40 }}
@@ -82,7 +87,7 @@ export default function Header() {
                 transition={{ duration: 0.7, delay: 1.7 }}
                 className="text-4xl sm:text-5xl font-bold"
               >
-                Hi I'm <span className="text-cs-green">Cyrel Villanueva</span>
+                Hi I&#39;m <span className="text-cs-green">Cyrel Villanueva</span>
               </MotionH1>
               <MotionH2
                 initial={{ opacity: 0 }}
@@ -96,7 +101,7 @@ export default function Header() {
                 initial={{ opacity: 0, x: -40 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.7, delay: 1.7 }}
-                className="text-sm sm:text-base"
+                className="text-sm sm:text-base md:text-lg"
               >
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat labore tempora quo blanditiis! Iste eum quod velit itaque sapiente,
                 quo eveniet quidem modi cupiditate corporis inventore nihil nostrum distinctio accusamus!
@@ -105,21 +110,26 @@ export default function Header() {
                 initial={{ opacity: 0, x: -40 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.7, delay: 1.7 }}
-                className="px-8 py-2 bg-cs-green text-white self-start mt-4 flex justify-center items-center gap-x-1"
+                className="py-2 text-cs-green border border-cs-green px-8 self-start mt-4 flex justify-center items-center gap-x-1"
               >
                 <span>My Projects</span>
                 <IoIosArrowRoundForward size={25} />
               </MotionButton>
             </div>
           </div>
-          <div className="flex items-center justify-center md:gap-x-8 gap-x-12 relative w-full lg:flex-1">
-            <MotionDiv initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.7, delay: 1.7 }}>
+          <div className="flex items-center justify-center md:gap-x-8 gap-x-16 relative w-full lg:flex-1">
+            <MotionDiv
+              initial={{ opacity: 0, x: 40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7, delay: 1.5 }}
+              className="border rounded-full border-cs-green p-1"
+            >
               <Image
                 alt="hello world"
                 src={heroImg}
                 width={400}
                 height={400}
-                className="m-auto rounded-full w-full aspect-square object-cover object-bottom max-w-[400px]"
+                className="m-auto rounded-full w-full aspect-square object-cover object-center max-w-[340px] lg:max-w-[450px]"
               />
             </MotionDiv>
             <MotionDiv
