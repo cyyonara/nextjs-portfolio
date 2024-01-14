@@ -2,7 +2,6 @@ import heroImg from "@/assets/profile.jpg";
 import Image from "next/image";
 import { FaGithub, FaFacebook, FaInstagram } from "react-icons/fa";
 import { HiMenuAlt3 } from "react-icons/hi";
-import { motion } from "framer-motion";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { MotionH1 } from "./motionH1";
 import { MotionH2 } from "./motionH2";

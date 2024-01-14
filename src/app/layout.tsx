@@ -3,7 +3,7 @@ import { Tektur } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 
-const inter = Tektur({ subsets: ["latin"] });
+const tektur = Tektur({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "CBV - Portfolio",
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={tektur.className}>
         <Header />
         {children}
       </body>
