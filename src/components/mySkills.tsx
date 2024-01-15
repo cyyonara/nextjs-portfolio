@@ -22,23 +22,23 @@ import { MotionDiv } from "./motionDiv";
 import { MotionSpan } from "./motionSpan";
 
 export default function MySkills() {
-  const frontEndTools: Array<StaticImageData> = [htmlIcon, cssIcon, jsIcon, reactIcon, nexttIcon, tailwind];
+  const frontEndTools: Array<StaticImageData> = [htmlIcon, cssIcon, jsIcon, typescript, reactIcon, nexttIcon, tailwind];
   const backEndTools: Array<StaticImageData> = [node, express, php, mysql, mongo, mongoose];
-  const tools: Array<StaticImageData> = [typescript, github, git, figma];
+  const tools: Array<StaticImageData> = [github, git, figma];
   const others: Array<StaticImageData> = [java, vb];
 
   return (
-    <section className="flex min-h-[45vh] relative py-11">
-      <div className="flex-1 m-auto max-w-[1300px] flex flex-col gap-y-20">
+    <section className="flex min-h-[30vh] relative py-11">
+      <div className="flex-1 m-auto max-w-[1300px] items-center flex flex-col gap-y-14">
         <MotionH1
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.7 }}
-          className="text-4xl font-bold text-center text-cs-green"
+          className="text-4xl sm:text-5xl font-bold text-cs-green"
         >
           My <span className="text-white">Skills</span>
         </MotionH1>
-        <div className="flex gap-x-24">
+        <div className="grid grid-cols-[repeat(1,auto)] md:grid-cols-[repeat(2,auto)] lg:grid-cols-[repeat(4,auto)] gap-y-10 gap-x-24">
           <MotionDiv
             initial={{ opacity: 0, translateY: "30%" }}
             whileInView={{ opacity: 1, translateY: "0%" }}
@@ -46,17 +46,15 @@ export default function MySkills() {
             className="flex flex-col gap-y-6 flex-1"
           >
             <div className="flex flex-col gap-1">
-              <h3 className="text-xl font-medium isolate w-min whitespace-nowrap">
-                Front-End <span className="text-cs-green">Development</span>
-              </h3>
+              <h3 className="text-xl font-medium isolate w-min whitespace-nowrap">Front-End Development</h3>
               <MotionSpan
                 initial={{ width: "0%" }}
-                whileInView={{ width: "70%" }}
+                whileInView={{ width: 40 }}
                 transition={{ delay: 1.6, duration: 1 }}
                 className="w-[70%] h-[2px] bg-cs-green"
               ></MotionSpan>
             </div>
-            <div className="flex gap-x-4">
+            <div className="flex flex-wrap gap-4">
               {frontEndTools.map((tool, i) => (
                 <span key={i} className="flex gap-x-2 items-center">
                   <Image src={tool} alt="html" width={30} height={30} className="min-w-[30px] min-h-[30px] object-contain" />
@@ -71,20 +69,18 @@ export default function MySkills() {
             className="flex-col flex gap-y-6 flex-1"
           >
             <div className="flex flex-col gap-1">
-              <h3 className="text-xl font-medium isolate w-min whitespace-nowrap">
-                Back-End <span className="text-cs-green">Development</span>
-              </h3>
+              <h3 className="text-xl font-medium isolate w-min whitespace-nowrap">Back-End Development</h3>
               <MotionSpan
                 initial={{ width: "0%" }}
-                whileInView={{ width: "70%" }}
+                whileInView={{ width: 40 }}
                 transition={{ delay: 1.6, duration: 1 }}
                 className="w-[70%] h-[2px] bg-cs-green"
               ></MotionSpan>
             </div>
-            <div className="flex gap-x-4">
+            <div className="flex flex-wrap gap-4">
               {backEndTools.map((tool, i) => (
                 <span key={i} className="flex gap-x-2 items-center">
-                  <Image src={tool} alt="html" width={30} height={30} className="min-w-[30px] min-h-[30px] object-contain" />
+                  <Image src={tool} alt="html" width={30} height={30} className="w-[30px] h-[30px] object-contain" />
                 </span>
               ))}
             </div>
@@ -96,17 +92,15 @@ export default function MySkills() {
             className="flex-col flex gap-y-6 flex-1"
           >
             <div className="flex flex-col gap-1">
-              <h3 className="text-xl font-medium isolate w-min whitespace-nowrap">
-                To<span className="text-cs-green">ols</span>
-              </h3>
+              <h3 className="text-xl font-medium isolate w-min whitespace-nowrap">Tools</h3>
               <MotionSpan
                 initial={{ width: "0%" }}
-                whileInView={{ width: "12%" }}
+                whileInView={{ width: 40 }}
                 transition={{ delay: 1.6, duration: 1 }}
                 className="w-[12%] h-[2px] bg-cs-green"
               ></MotionSpan>
             </div>
-            <div className="flex gap-x-4">
+            <div className="flex flex-wrap gap-4">
               {tools.map((tool, i) => (
                 <span key={i} className="flex gap-x-2 items-center">
                   <Image src={tool} alt="html" width={30} height={30} className="min-w-[30px] min-h-[30px] object-contain" />
@@ -121,17 +115,15 @@ export default function MySkills() {
             className="flex-col flex gap-y-6 flex-1"
           >
             <div className="flex flex-col gap-1">
-              <h3 className="text-xl font-medium isolate w-min whitespace-nowrap">
-                Oth<span className="text-cs-green">ers</span>
-              </h3>
+              <h3 className="text-xl font-medium isolate w-min whitespace-nowrap">Others</h3>
               <MotionSpan
                 initial={{ width: "0%" }}
-                whileInView={{ width: "16%" }}
+                whileInView={{ width: 40 }}
                 transition={{ delay: 1.6, duration: 1 }}
                 className="w-[16%] h-[2px] bg-cs-green"
               ></MotionSpan>
             </div>
-            <div className="flex gap-x-4">
+            <div className="flex flex-wrap gap-4">
               {others.map((tool, i) => (
                 <span key={i} className="flex gap-x-2 items-center">
                   <Image src={tool} alt="html" width={30} height={30} className="min-w-[30px] min-h-[30px] object-contain" />
