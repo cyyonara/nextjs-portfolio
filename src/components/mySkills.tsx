@@ -4,7 +4,6 @@ import htmlIcon from "@/assets/html.png";
 import cssIcon from "@/assets/css-3.png";
 import jsIcon from "@/assets/js.png";
 import reactIcon from "@/assets/physics.png";
-import nexttIcon from "@/assets/nextjs.png";
 import tailwind from "@/assets/tailwind.png";
 import mysql from "@/assets/mysql.png";
 import php from "@/assets/php.png";
@@ -15,16 +14,29 @@ import mongoose from "@/assets/mongoose.png";
 import github from "@/assets/github.png";
 import git from "@/assets/git.png";
 import typescript from "@/assets/typescript.png";
-import figma from "@/assets/figma.png";
 import java from "@/assets/java.png";
 import vb from "@/assets/visual-basic.png";
 import { MotionDiv } from "./motionDiv";
 import { MotionSpan } from "./motionSpan";
 
 export default function MySkills() {
-  const frontEndTools: Array<StaticImageData> = [htmlIcon, cssIcon, jsIcon, typescript, reactIcon, nexttIcon, tailwind];
-  const backEndTools: Array<StaticImageData> = [node, express, php, mysql, mongo, mongoose];
-  const tools: Array<StaticImageData> = [github, git, figma];
+  const frontEndTools: Array<StaticImageData> = [
+    htmlIcon,
+    cssIcon,
+    jsIcon,
+    typescript,
+    reactIcon,
+    tailwind,
+  ];
+  const backEndTools: Array<StaticImageData> = [
+    node,
+    express,
+    php,
+    mysql,
+    mongo,
+    mongoose,
+  ];
+  const tools: Array<StaticImageData> = [github, git];
   const others: Array<StaticImageData> = [java, vb];
 
   return (
@@ -46,7 +58,9 @@ export default function MySkills() {
             className="flex flex-col gap-y-6 flex-1"
           >
             <div className="flex flex-col gap-1">
-              <h3 className="text-xl font-medium isolate w-min whitespace-nowrap">Front-End Development</h3>
+              <h3 className="text-xl font-medium isolate w-min whitespace-nowrap">
+                Front-End Development
+              </h3>
               <MotionSpan
                 initial={{ width: "0%" }}
                 whileInView={{ width: 40 }}
@@ -57,7 +71,13 @@ export default function MySkills() {
             <div className="flex flex-wrap gap-4">
               {frontEndTools.map((tool, i) => (
                 <span key={i} className="flex gap-x-2 items-center">
-                  <Image src={tool} alt="html" width={30} height={30} className="min-w-[30px] min-h-[30px] object-contain" />
+                  <Image
+                    src={tool}
+                    alt="html"
+                    width={30}
+                    height={30}
+                    className="min-w-[30px] min-h-[30px] object-contain"
+                  />
                 </span>
               ))}
             </div>
@@ -69,7 +89,9 @@ export default function MySkills() {
             className="flex-col flex gap-y-6 flex-1"
           >
             <div className="flex flex-col gap-1">
-              <h3 className="text-xl font-medium isolate w-min whitespace-nowrap">Back-End Development</h3>
+              <h3 className="text-xl font-medium isolate w-min whitespace-nowrap">
+                Back-End Development
+              </h3>
               <MotionSpan
                 initial={{ width: "0%" }}
                 whileInView={{ width: 40 }}
@@ -80,7 +102,13 @@ export default function MySkills() {
             <div className="flex flex-wrap gap-4">
               {backEndTools.map((tool, i) => (
                 <span key={i} className="flex gap-x-2 items-center">
-                  <Image src={tool} alt="html" width={30} height={30} className="w-[30px] h-[30px] object-contain" />
+                  <Image
+                    src={tool}
+                    alt="html"
+                    width={30}
+                    height={30}
+                    className="w-[30px] h-[30px] object-contain"
+                  />
                 </span>
               ))}
             </div>
@@ -92,7 +120,9 @@ export default function MySkills() {
             className="flex-col flex gap-y-6 flex-1"
           >
             <div className="flex flex-col gap-1">
-              <h3 className="text-xl font-medium isolate w-min whitespace-nowrap">Tools</h3>
+              <h3 className="text-xl font-medium isolate w-min whitespace-nowrap">
+                Tools
+              </h3>
               <MotionSpan
                 initial={{ width: "0%" }}
                 whileInView={{ width: 40 }}
@@ -103,7 +133,13 @@ export default function MySkills() {
             <div className="flex flex-wrap gap-4">
               {tools.map((tool, i) => (
                 <span key={i} className="flex gap-x-2 items-center">
-                  <Image src={tool} alt="html" width={30} height={30} className="min-w-[30px] min-h-[30px] object-contain" />
+                  <Image
+                    src={tool}
+                    alt="html"
+                    width={30}
+                    height={30}
+                    className="min-w-[30px] min-h-[30px] object-contain"
+                  />
                 </span>
               ))}
             </div>
@@ -115,7 +151,9 @@ export default function MySkills() {
             className="flex-col flex gap-y-6 flex-1"
           >
             <div className="flex flex-col gap-1">
-              <h3 className="text-xl font-medium isolate w-min whitespace-nowrap">Others</h3>
+              <h3 className="text-xl font-medium isolate w-min whitespace-nowrap">
+                Others
+              </h3>
               <MotionSpan
                 initial={{ width: "0%" }}
                 whileInView={{ width: 40 }}
@@ -126,7 +164,13 @@ export default function MySkills() {
             <div className="flex flex-wrap gap-4">
               {others.map((tool, i) => (
                 <span key={i} className="flex gap-x-2 items-center">
-                  <Image src={tool} alt="html" width={30} height={30} className="min-w-[30px] min-h-[30px] object-contain" />
+                  <Image
+                    src={tool}
+                    alt="html"
+                    width={30}
+                    height={30}
+                    className="min-w-[30px] min-h-[30px] object-contain"
+                  />
                 </span>
               ))}
             </div>

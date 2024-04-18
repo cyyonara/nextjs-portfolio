@@ -6,3 +6,11 @@ body {
   overflow-wrap: break-word;
   @apply bg-cs-dark scroll-smooth;
 }
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-cs-green rounded-full;
+}

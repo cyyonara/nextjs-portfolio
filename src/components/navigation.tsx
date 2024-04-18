@@ -4,22 +4,29 @@ import { HiMenuAlt3 } from "react-icons/hi";
 import { MotionH1 } from "./motionH1";
 import { MotionLi } from "./motionLi";
 import { MotionButton } from "./motionButton";
+import Link from "next/link";
 
 export default function Navigation() {
   const scrollToAboutMe = () => {
     document.querySelector(".about")?.scrollIntoView();
   };
 
+  const scrollToProjects = () => {
+    document.querySelector(".projects")?.scrollIntoView();
+  };
+
   return (
     <nav className="flex justify-between items-center w-full gap-x-8 max-w-[1300px] mx-auto py-8">
-      <MotionH1
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="text-cs-green font-extrabold text-3xl"
-      >
-        CBV.
-      </MotionH1>
+      <Link href="/">
+        <MotionH1
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-cs-green font-extrabold text-3xl"
+        >
+          CBV.
+        </MotionH1>
+      </Link>
       <div className="text-white hidden md:block">
         <ul className="flex items-center gap-x-14">
           <MotionLi
@@ -45,6 +52,7 @@ export default function Navigation() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 1 }}
+            onClick={scrollToProjects}
             className="flex flex-col cursor-pointer group"
           >
             <span className=" group-hover:text-cs-green duration-150">Projects</span>

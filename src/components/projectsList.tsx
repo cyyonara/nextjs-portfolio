@@ -2,6 +2,7 @@ import anisource from "@/assets/anisource.png";
 import pos from "@/assets/pos.png";
 import hd from "@/assets/hd.png";
 import chupee from "@/assets/chupee.png";
+import taskify from "@/assets/taskify.png";
 
 import { StaticImageData } from "next/image";
 import Project from "./project";
@@ -54,7 +55,6 @@ export default function ProjectsList() {
       githubLink: "https://github.com/cyyonara/aniV1",
       stacks: ["React JS", "Tailwind Css", "Material-UI"],
     },
-
     {
       projectName: "Chupee - Computer Peripherals E. Store",
       description: dummyDescription,
@@ -74,10 +74,31 @@ export default function ProjectsList() {
         "JWT",
       ],
     },
+    {
+      projectName: "Taskify",
+      description: dummyDescription,
+      image: taskify,
+      githubLink: "https://github.com/cyyonara/Taskify",
+      stacks: [
+        "React JS",
+        "Tailwind Css",
+        "Shadcn/UI",
+        "Framer Motion",
+        "Zustand",
+        "Tanstack React-Query",
+        "Firebase",
+        "Typescript",
+        "Node JS",
+        "Express JS",
+        "Mongo DB",
+        "JWT",
+        "Mongoose",
+      ],
+    },
   ];
 
   return (
-    <section className="flex relative py-20 mt-12">
+    <section className="flex relative py-20 mt-12 projects">
       <div className="flex-1 mx-auto max-w-[1200px] justify-center flex flex-col gap-y-16">
         <h1 className="text-4xl sm:text-5xl text-center font-bold text-white">
           Pro<span className="text-cs-green">jects</span>
